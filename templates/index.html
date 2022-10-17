@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta naem="Keywords" content="demo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome my demo web</title>
+    <!-- 網站字型-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <!--網站小圖示 -->
+    <!-- <link rel="shorcut icon" href="images/icon-main.ico"> -->
+    <!-- 歸零CSS    -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 變數設定CSS-->
+    <link rel="stylesheet" href="../css/basic.css">
+    <!-- 設定版面CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- JQeury setting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/gotop.js"></script>
+    <!-- 共用JS -->
+    <script src="/js/slide.min.js"></script>
+    <!-- 媒體查詢CSS -->
+    <link rel="stylesheet" href="../css/style-m.css" media="(max-width:1239px) and (min-width:980px)">
+    <link rel="stylesheet" href="../css/style-s.css" media="(max-width:979px)">
+    <!-- icon圖標 -->
+    <link rel="stylesheet" href="../css/icon-style.css">
+    <!-- banner setting -->
+    <link rel="stylesheet" href="../css/slide.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1><span>Weapon</span><a href="index.html"></a></h1>
+        </div>
+        <div id="nav">
+            <!-- 上層的固定選單 -->
+            <nav id="top-nav">
+                <ul>
+                    <li><a href="#0"><span class="material-icons">app_shortcut</span><span class="topnav-text">Go to
+                                App</span></a></li>
+                    <li><a href="#0"><span class="material-icons">storefront</span><span class="topnav-text">Online
+                                Shop</span></a></li>
+                </ul>
+            </nav>
+            <!-- 漢堡選單 -->
+            <nav id="main-nav">
+                <span class="tip">Click to Open Nevigation.</span>
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="stores.html">Stores</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="New.html">New <span class="material-icons">arrow_drop_down</span></a>
+                                    <ul>
+                                        <li><a href="New_lady.html">Lady</a></li>
+                                        <li><a href="New_girl.html">Girl</a></li>
+                                        <li><a href="New_child.html">Child</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <p id="nav-sns">
+                                    <a href="#" target="_blank">
+                                        <span class="icon-fb"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-ig"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-twitter"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-linked"></span>
+                                    </a>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- <div id="banner">
+        <img src="../images/Hololive123.png" alt="Hololive">
+    </div> -->
+    <div class="banner" id="banner">
+        <!-- 橫幅4圖 -->
+        <div id="slide2d" class="slide-carousel slide-2d">
+            <ul class="item-list">
+                <li class="item0">
+                    <div class="item-content">
+                        <a href="#">
+                            <picture>
+                                <!-- media search -->
+                                <source media="(max-width: 959px) and (min-width: 768px)" srcset="/images/Miko4.png">
+                                <source media="(max-width: 767px)" srcset="/images/Miko4.png">
+                                <img src="/images/Miko4.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item1">
+                    <div class="item-content">
+                        <a href="#">
+                            <picture>
+                                <!-- media search -->
+                                <source media="(max-width: 959px) and (min-width: 768px)" srcset="/images/Ayama6.jpg">
+                                <source media="(max-width: 767px)" srcset="/images/Ayama6.jpg">
+                                <img src="/images/Ayama6.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item2">
+                    <div class="item-content">
+                        <a href="#">
+                            <picture>
+                                <!-- media search -->
+                                <source media="(max-width: 959px) and (min-width: 768px)" srcset="/images/YMD4.jpg">
+                                <source media="(max-width: 767px)" srcset="/images/Hololive123.png">
+                                <img src="/images/YMD4.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item3">
+                    <div class="item-content">
+                        <a href="#">
+                            <picture>
+                                <!-- media search -->
+                                <source media="(max-width: 959px) and (min-width: 768px)" srcset="/images/Kanata3.jpg">
+                                <source media="(max-width: 767px)" srcset="/images/Kanata3.jpg">
+                                <img src="/images/Kanata3.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- 指示圖示 -->
+            <div class="indicator-list">
+                <a href="#" data-slide-index="0" class="selected"></a>
+                <a href="#" data-slide-index="1"></a>
+                <a href="#" data-slide-index="2"></a>
+                <a href="#" data-slide-index="3"></a>
+            </div>
+
+            <!-- 左右控制器 -->
+            <div class="controls">
+                <a href="#" class="item-prev glyphicon glyphicon-menu-left"></a>
+                <a href="#" class="item-next glyphicon glyphicon-menu-right"></a>
+            </div>
+
+            <!-- 底色塊 -->
+            <div class="desc"></div>
+        </div>
+    </div>
+    <div id="main-content">
+        <div class="slogan">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s</p>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters</p>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making</p>
+        </div>
+        <div class="post">
+            <div class="post_title">Hololive</div>
+            <div class="post_img"><a href="#"><img src="../images/PNG影像 2.png" alt=""></a></div>
+            <div class="post_text">造美戶皮青車言好走少害羊色流；且金跳斤叫牙物那信象給也杯和物福丟裏，你道也哭怕昌人後月月同兄高足尤原海福後，豆有書女唱節地河英屋葉石毛文許者出草。</div>
+            <div class="more"><a href="#">View more <i class="material-icons">double_arrow</i></a></div>
+        </div>
+        <div class="post">
+            <div class="post_title">Hololive</div>
+            <div class="post_img"><a href="#"><img src="../images/PNG影像.png" alt=""></a></div>
+            <div class="post_text">造美戶皮青車言好走少害羊色流；且金跳斤叫牙物那信象給也杯和物福丟裏，你道也哭怕昌人後月月同兄高足尤原海福後，豆有書女唱節地河英屋葉石毛文許者出草。</div>
+            <div class="more"><a href="#">View more <i class="material-icons">double_arrow</i></a></div>
+        </div>
+    </div>
+    <!-- 展示圖區塊 -->
+    <div id="picshow">
+        <a href="#"><img src="../images/Akqua_1.png" alt="" title="Click to see more"></a>
+        <a href="#"><img src="../images/巧可1.png" alt="" title="Click to see more"></a>
+        <a href="#"><img src="../images/Azki1.png" alt="" title="Click to see more"></a>
+        <a href="#"><img src="../images/Koyori2.png" alt="" title="Click to see more"></a>
+    </div>
+    <div id="movie">
+        <iframe width="665" height="374" src="https://www.youtube.com/embed/To6oC53ZU14"
+            title="Cyberpunk: Edgerunners AMV 4K - I Really Want to Stay at Your House by Rosa Walton & Hallie Coggins"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div id="footer">
+        <div id="small-logo">qwejqwjepqwjeqwej</div>
+        <div id="copyright">&copy;hhqwurhqwuehquwe</div>
+        <div id="sns">
+            <a href="#" target="_blank">
+                <span class="icon-fb"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-ig"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-twitter"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-linked"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Go Top  -->
+    <div id="gotop">
+        <ion-icon class="arrow-up-circle-outline" name="arrow-up-circle-outline"></ion-icon>
+        <span class="gotip">Go Back To Top</span>
+    </div>
+
+    <!-- ionicon -->
+    <!-- <script>
+        // 設定變數指定gotop
+        const mybutton = document.querySelector('#gotop');
+
+        //設定當畫面捲動到400時出現gotop按鈕，否則就隱藏起來
+        window.onscroll = function () {
+            scrollwindow()
+        };
+
+        function scrollwindow() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                mybutton.style.display = 'block';
+            } else {
+                mybutton.style.display = 'none';
+            }
+        }
+        // 設定按下按鈕時畫面移到頁面上方
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

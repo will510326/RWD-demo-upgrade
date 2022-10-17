@@ -1,0 +1,796 @@
+/* 共用結構設定 */
+/* 頁首頁尾設定 */
+#header,
+#footer {
+    width: calc(100% - 20px);
+    padding: 0 10px;
+}
+
+#logo a {
+    width: 250px;
+    height: 120px;
+}
+
+#header {
+    height: 120px;
+}
+
+/* 選單設定 */
+#nav {
+    width: 50%;
+    margin-top: 30px;
+}
+
+/* 上層固定設定 */
+#top-nav {
+    float: none;
+    width: 70%;
+    margin: 5px 20px 5px 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: var(--normal);
+}
+
+@media (max-width:520px) {
+    #nav {
+        width: 120px;
+    }
+
+    #top-nav a {
+        display: block;
+        width: 70%;
+        margin-left: 10px;
+        float: left;
+    }
+
+    #top-nav .topnav-test {
+        display: none;
+    }
+}
+
+@media (max-width:400px) {
+    #nav {
+        width: 80px;
+    }
+
+
+    #top-nav {
+        display: none;
+    }
+}
+
+/* 主選單 */
+#main-nav {
+    float: none;
+    position: fixed;
+    top: 40px;
+    right: 25px;
+    z-index: 9999;
+    font-size: var(--h6);
+}
+
+#main-nav:active .tip {
+    visibility: visible;
+}
+
+#main-nav a {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    overflow: hidden;
+    color: var(--pink);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#main-nav a:hover,
+#main-nav a:active {
+    color: var(--block);
+    border-bottom: none;
+    text-transform: uppercase;
+}
+
+#main-nav li {
+    float: none;
+}
+
+.hightlight_txt {
+    border-bottom: none;
+    background-color: rgba(235, 87, 87, 0.3);
+    color: gray;
+}
+
+/* -----第二層選單----- */
+#main-nav li li a {
+    display: block;
+    margin-right: 40px;
+    float: left;
+    font-size: var(--normal);
+}
+
+@media (max-width:500px) {
+    #main-nav li li a {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:425px) {
+    #main-nav li li a {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:375px) {
+    #main-nav li li a {
+        margin-right: 0;
+    }
+}
+
+@media (max-width:320px) {
+    #main-nav li li a {
+        margin-right: 10px;
+    }
+}
+
+#main-nav ul ul {
+    transform: translate(400%, -67%);
+    visibility: hidden;
+}
+
+@media (max-width:768px) {
+    #main-nav ul ul {
+        transform: translate(350%, -67%);
+    }
+}
+
+@media (max-width:640px) {
+    #main-nav ul ul {
+        transform: translate(250%, -67%);
+    }
+}
+
+#main-nav ul ul a {
+    width: 100px;
+}
+
+#main-nav li:hover>ul {
+    visibility: visible;
+}
+
+.menu>div>div>ul>li>a {
+    transition: all 2.4s ease;
+}
+
+/* 漢堡選單設定 */
+.toggler {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    padding: 12px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger>div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.hamburger>div::before,
+.hamburger>div::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.hamburger>div::after {
+    top: 10px;
+}
+
+.toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+}
+
+.toggler:checked+.hamburger>div::before,
+.toggler:checked+.hamburger>div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.toggler:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+}
+
+.toggler:checked~.menu {
+    visibility: visible;
+}
+
+.toggler:checked~.menu>div {
+    transform: scale(1);
+    transition-duration: 0.75s;
+}
+
+.toggler:checked~.menu>div>div {
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu>div {
+    background: rgba(255, 255, 255, 0.9);
+    /* border-radius: 50%; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all .4s ease;
+}
+
+.menu>div>div {
+    text-align: center;
+    width: 100vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+#nav-sns {
+    display: block;
+    margin-top: 30px;
+}
+
+#nav-sns a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+}
+
+#nav-sns a:hover {
+    background-color: #ffffff00;
+}
+
+/* -----頁尾設定----- */
+#footer {
+    width: 100%;
+    clear: both;
+    margin: 30px auto;
+    border-bottom: 15px solid var(--pink);
+}
+
+#small-logo,
+#sns {
+    display: none;
+}
+
+#small-log,
+#copyright {
+    padding-top: 0;
+}
+
+#copyright small,
+#copyright a {
+    margin-left: 0;
+    margin-top: 10px;
+    display: block;
+}
+
+#copyright {
+    width: 100%;
+    font-size: var(--normal);
+    text-align: center;
+}
+
+/* -----內頁版面設定----- */
+/* ---首頁版面--- */
+#main-content {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.slogan,
+.post,
+.post_text {
+    width: 80%;
+    margin: 30px auto;
+    height: auto;
+    float: none;
+}
+
+.slogan h2,
+.post_title {
+    font-size: var(--h2);
+    text-align: center;
+}
+
+.slogan p,
+.post_text {
+    font-size: var(--h6);
+}
+
+@media (max-width:500px) {
+    .post_title {
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+.post {
+    border-bottom: 1px solid var(--pink);
+    padding-bottom: 30px;
+}
+
+.post_img {
+    width: 100%;
+}
+
+.post_text {
+    width: calc(100% - 20px);
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.post .more {
+    padding-right: 15px;
+    font-size: var(--normal)
+}
+
+#picshow {
+    flex-wrap: wrap;
+}
+
+#picshow a {
+    width: 50%;
+}
+
+#picshow a img {
+    width: 100%;
+}
+
+#movie {
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+#movie iframe {
+    height: 350px;
+}
+
+/* -----About網頁設定----- */
+/* ---橫幅設定--- */
+.hero-image {
+    margin-bottom: 0;
+}
+
+#mainpic {
+    width: 90%;
+    grid-template-rows: 50% 50%;
+    background-color: rgb(95, 172, 157);
+}
+
+#contact_form,
+#map {
+    width: calc(100% - 20px);
+    padding: 10px;
+    float: none;
+    margin-bottom: 30px;
+}
+
+#contact_form input,
+#contact_form textarea {
+    border-radius: 8px;
+    font-size: var(--h6);
+}
+
+#contact_form textarea {
+    height: 250px;
+}
+
+#map iframe {
+    box-shadow: 0 0 8px var(--pink);
+}
+
+/* ---Store設定--- */
+.officebox {
+    width: 45%;
+    height: 300px;
+}
+
+.officebox img {
+    width: auto;
+    height: 300px;
+}
+
+@media (max-width:820px) {
+    .officebox {
+        width: 90%;
+        height: 500px;
+        float: none;
+        margin: 30px;
+    }
+
+    .officebox img {
+        width: auto;
+        height: 500px;
+    }
+}
+
+@media (max-width:640px) {
+    .officebox {
+        height: 450px;
+    }
+
+    .officebox img {
+        height: 450px;
+    }
+
+    .subtext {
+        text-align: left;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width:500px) {
+    .officebox {
+        height: 400px;
+    }
+
+    .officebox img {
+        height: 400px;
+    }
+}
+
+/* ---Product設定--- */
+.demobox {
+    width: calc(50% - 20px);
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media (max-width:600px) {
+    .demobox {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+        float: none;
+    }
+}
+
+/* ---News設定--- */
+.newspost {
+    margin: 0 auto;
+    position: relative;
+}
+
+.news_pic {
+    width: 100%;
+    height: auto;
+    float: none;
+}
+
+.news_pic img {
+    width: 100%;
+    height: auto;
+}
+
+.news_txt {
+    width: 100%;
+    height: 50%;
+    padding: 10px 40px;
+    float: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.news_txt .category,
+.news_txt p {
+    font-size: 110%;
+}
+
+@media (max-width:840px) {
+    .news_txt {
+        height: 35%;
+        padding: 10px 20px;
+    }
+
+    .news_txt .category {
+        border-radius: 30px;
+    }
+
+    .news_txt h4 {
+        margin: 30px;
+        padding: 0 20px;
+        font-size: 22px;
+    }
+
+    .news_txt p {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .news_txt {
+        height: inherit;
+        bottom: 10px;
+    }
+
+    .news_txt h4,
+    .news_txt p,
+    .category a,
+    .category .date {
+        display: none;
+    }
+
+    .news_txt .category::after {
+        content: 'Click Picture to See More';
+        color: var(--pink);
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ---News - Lady設定--- */
+#main-content .row .column {
+    width: 50%;
+}
+
+.collaps_text {
+    -webkit-line-clamp: 2;
+}
+
+.column-text {
+    column-count: 1;
+}
+
+.collaps_downtext {
+    line-height: 1.7;
+}
+
+.row .column .content p,
+.collaps_text p {
+    font-size: 110%;
+}
+
+@media (max-width:768px) {
+    #main-content .row .column {
+        width: 100%;
+    }
+
+    .content img,
+    figure img {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
+    .content a {
+        display: none;
+    }
+
+    .collapsible {
+        display: block;
+        background-color: var(--pink);
+        color: white;
+        width: 100%;
+        padding: 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .collapsible:hover {
+        background-color: grey;
+    }
+
+    .collapsible::after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+    }
+
+    .active::after {
+        content: '\2212';
+    }
+
+    .collaps_text span {
+        display: block;
+        padding: 20px 0;
+        line-height: 1.2;
+    }
+
+    .collaps_text,
+    .collaps_downtext {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-out;
+        background-color: wheat;
+    }
+}
+
+/* ---News - girl設定--- */
+.leftcolumn,
+.rightcolumn {
+    float: none;
+    width: 100%;
+}
+
+.card {
+    padding: 15px;
+    margin: 15px;
+}
+
+.leftcolumn .card p {
+    text-align: left;
+}
+
+@media(max-width:640px) {
+    .card h2 {
+        line-height: 1.2;
+        font-size: 24px;
+    }
+
+    .card p {
+        line-height: 1.3;
+        font-size: 16px;
+    }
+
+    .card h5 {
+        line-height: 1.2;
+        font-size: 18px;
+    }
+
+    .cardimg {
+        width: 100%;
+        height: 350px;
+    }
+
+    .cardimg img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ---News - Chid設定--- */
+#outbox {
+    column-count: 2;
+    width: calc(100% - 60px);
+    padding: 30px;
+}
+
+.content_box {
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+.overlay {
+    width: calc(100% - 20px);
+    left: 10px;
+    bottom: 12px;
+}
+
+@media(max-width:600px) {
+    #outbox {
+        column-count: 1;
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+}
+
+/* ---News - Chid設定--- */
+.features_box {
+    height: 320px;
+    padding: 10px;
+    display: flex;
+}
+
+.features_box>.pic_circle {
+    border-radius: 0;
+    width: 33%;
+    height: 100%;
+    position: static;
+    transform: translate(0%, 0%);
+    box-shadow: none;
+    float: none;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.small_layout {
+    width: 100%;
+}
+
+@media (max-width:768px){
+    .features_box{
+        display: block;
+        height: 900%;
+        margin: -20px;
+    }
+    .features_box > .pic_circle{
+        width: 100%;
+        height: 33%;
+        border-radius: 20px;
+        clip-path: inset(0 0 0 0);
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width:580px){
+    .back_line{
+        background-image: repeating-linear-gradient(var(--green) 26%, var(--pink) 30%, var(--pink) 31%, var(--pink));
+    }
+    .step h4{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .step p{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width:425px){
+    .step{
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+        border-bottom: 1px solid var(--pink);
+        padding-bottom: 15px;
+    }
+    .step span{
+        margin: 15px 10px 5px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .step p{
+        font-size: 20px;
+    }
+}

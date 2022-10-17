@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta naem="Keywords" content="demo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome my demo web - New</title>
+    <!-- 網站字型-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <!--網站小圖示 -->
+    <!-- <link rel="shorcut icon" href="images/icon-main.ico"> -->
+    <!-- 歸零CSS    -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 變數設定CSS-->
+    <link rel="stylesheet" href="../css/basic.css">
+    <!-- 設定版面CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- JQeury setting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/gotop.js"></script>
+    <!-- 共用JS -->
+    <script src="/js/slide.min.js"></script>
+    <!-- 媒體查詢CSS -->
+    <link rel="stylesheet" href="../css/style-m.css" media="(max-width:1239px) and (min-width:980px)">
+    <link rel="stylesheet" href="../css/style-s.css" media="(max-width:979px)">
+    <!-- icon圖標 -->
+    <link rel="stylesheet" href="../css/icon-style.css">
+    <!-- banner setting -->
+    <link rel="stylesheet" href="../css/slide.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <h1><span>Weapon</span><a href="index.html"></a></h1>
+        </div>
+        <div id="nav">
+            <!-- 上層的固定選單 -->
+            <nav id="top-nav">
+                <ul>
+                    <li><a href="#0"><span class="material-icons">app_shortcut</span><span class="topnav-text">Go to
+                                App</span></a></li>
+                    <li><a href="#0"><span class="material-icons">storefront</span><span class="topnav-text">Online
+                                Shop</span></a></li>
+                </ul>
+            </nav>
+            <!-- 漢堡選單 -->
+            <nav id="main-nav">
+                <span class="tip">Click to Open Nevigation.</span>
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="stores.html">Stores</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="New.html">New</a>
+                                    <ul>
+                                        <li><a href="New_lady.html">Lady</a></li>
+                                        <li><a href="New_girl.html">Girl</a></li>
+                                        <li><a href="New_child.html">Child</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html" class="highlight_txt">Contact</a></li>
+                                <p id="nav-sns">
+                                    <a href="#" target="_blank">
+                                        <span class="icon-fb"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-ig"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-twitter"></span>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <span class="icon-linked"></span>
+                                    </a>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- 橫幅區塊 -->
+    <div class="hero-image"
+        style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(../images/Hololive123.png);">
+        <div class="hero-text">
+            <h1 class="font-size-50 line-height_15">Hololive</h1>
+            <p class="margin_bottom-20">check out it</p>
+            <button>fuck</button>
+        </div>
+    </div>
+    <!-- 內容區塊 -->
+    <div id="main-content">
+        <h2 class="color_pink text-align_center margin_bottom-20">Hololive</h2>
+        <div class="features_box">
+            <div class="pic_circle"></div>
+            <div class="pic_circle"></div>
+            <div class="pic_circle"></div>
+        </div>
+    </div>
+    <div class="full_layout bg_piggy margin_v5 padding_bottom-30">
+        <div class="small_layout back_line">
+            <div class="step">
+                <span>1</span>
+                <h4>Step #1</h4>
+                <p>Hololive</p>
+                <p>Hololive</p>
+                <p>Hololive</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h4>Step #2</h4>
+                <p>Hololive</p>
+                <p>Hololive</p>
+                <p>Hololive</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h4>Step #3</h4>
+                <p>Hololive</p>
+                <p>Hololive</p>
+                <p>Hololive</p>
+            </div>
+        </div>
+    </div>
+    <div class="full_layout bg_piggy padding_v3">
+        <div id="main-content">
+            <h2 class="color_pink">contact us</h2>
+            <div id="contact_form">
+                <form action="" method="GET">
+                    <input type="text" name="username" id="username" placeholder="Your Name">
+                    <input type="text" name="usermail" id="usermail" placeholder="Your Mail">
+                    <input type="text" name="userphone" id="userphone" placeholder="Your Phone">
+                    <textarea name="useropinion" id="useropinion" placeholder="Leave Your Message Here"></textarea>
+                    <input type="submit" value="submit" class="button_pink-gradient cursor_pointer"
+                        onclick="alert('Thank You!!\n We will resond as soon as!')">
+                </form>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.279057867436!2d-77.05845558424268!3d38.87185677957456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b6df29ed2c27%3A0xaf83d0f8c013532f!2z5LqU6KeS5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1660999067841!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div id="small-logo">
+            <img src="" alt="">
+        </div>
+        <div id="copyright">
+            <small>Copyright 2022 Weapon</small>
+            <a href="tel:+123456789">tel:+123456789</a>
+        </div>
+        <div id="sns">
+            <a href="#" target="_blank">
+                <span class="icon-fb"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-ig"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-twitter"></span>
+            </a>
+            <a href="#" target="_blank">
+                <span class="icon-linked"></span>
+            </a>
+        </div>
+    </div>
+    <!-- 線上聊天客服 -->
+    <div class="section">
+        <!-- 開啟聊天按鈕 -->
+        <button class="chat-btn cursor_pointer">
+            <i class="material-icons">comment</i>
+        </button>
+        <div class="chat-popup">
+            <div class="badge">1</div>
+            <!-- 客服人員 -->
+            <div class="chat-area">
+                <div class="income-msg">
+                    <img src="/images/巧可1.png" class="avatar" alt="">
+                    <span class="msg"> Hi, How can I help you? </span>
+                </div>
+            </div>
+            <!-- 客服輸入 -->
+            <div class="input-area">
+                <input type="text" id="chat-input">
+                <button id="emoji-btn">&#127881;</button>
+                <button class="submit">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
+        </div>
+        <script src="/js/chat.js"></script>
+    </div>
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

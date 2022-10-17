@@ -1,0 +1,123 @@
+.section button{
+    border: none;
+}
+.chat-btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: var(--pink);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+.chat-btn:hover, .submit:hover{
+    opacity: 1;
+}
+.chat-popup{
+    display: none;
+    position: fixed;
+    right: 50px;
+    bottom: 150px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.show{
+    display: flex;
+}
+.badge{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-area{
+    height: 85%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.income-msg{
+    display: flex;
+    align-items: center;
+}
+.avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.income-msg .msg{
+    background-color: var(--orange);
+    color: black;
+    border-radius: 25px;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+.input-area{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.input-area input{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: var(--h6);
+
+}
+
+#emoji-btn{
+    position: absolute;
+    font-size: 25px;
+    right: 50px;
+    top: 2px;
+    background-color: transparent;
+}
+
+#emoji-btn:hover{
+    filter: drop-shadow(0 0 3px #000);
+}
+
+.submit{
+    border-radius: 8px;
+    background-color: var(--pink);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    margin-left: 10px;
+    opacity: 0.7;
+}
+.out-msg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.my-msg{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--pink);
+    color: white;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    word-break: break-all;
+}
